@@ -1,0 +1,10 @@
+.no-style-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.text-info {
+  --bs-text-opacity: 1;
+  color: #C80815 !important;
+}
+
