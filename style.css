@@ -1,0 +1,296 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*------------------GLOBAL------------------------*/
+
+body{
+    text-align: center;
+    margin: 0px;
+    background-color:#FFFFFF;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body.home{
+    background-color:#C80815;
+}
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/*------------------FRAME------------------------*/
+.frame{
+    min-width: 100vw;
+    min-height: 99vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.frame>header{
+    min-height: 40vh;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+.frame>header img{
+    width: 100%;
+    min-width: 320px;
+}
+
+/*------------------CONTENT------------------------*/
+
+.content{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content h2{
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 1em;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.content h3{
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1em;
+    margin: 0 0 32px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+/*------------------Form------------------------*/
+.form{
+    background: #000000;
+    padding:16px;
+    width: 300px;
+}
+
+.form h4{
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    margin: 0 0 20px 0;
+}
+
+#myForm{
+    display: flex;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+.champ{
+    width: 80%;
+}
+.champ input{
+    display: inline-block;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding:0px 10px;
+    height: 32px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.champ input:focus {
+    outline:none;
+}
+.champ input:focus-visible {
+    outline:none;
+}
+.BT{
+    width: 20%;
+}
+.BT button{
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding:5px 10px;
+    background-color:#C80815;
+    background-image: url("src/email.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    height: 32px;
+    width: 100%;
+}
+.BT button:hover{
+    background-color: #99050f;
+}
+.BT button:active{
+    background-color: #FFFFFF;
+    background-image: url("src/email-b.svg");
+}
+
+
+
+/*------------------Twitter------------------------*/
+
+.twitter h4{
+    color: #ffffff;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 16px 0 16px 0;
+}
+
+.twitter img{
+    width: 60px;
+}
+.twitter a{
+    display: block;
+    transform: scale(1);
+    opacity: 1;
+    transition:transform ease-in-out .2s, opacity ease-in-out .2s;
+}
+.twitter a:hover{
+    transform: scale(0.9);
+    opacity: .8;
+    transition:transform ease-in-out .2s, opacity ease-in-out .2s;
+}
+
+
+/*------------------FOOTER------------------------*/
+
+footer p{
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+footer p a{
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity ease-in-out .2s;
+}
+footer p a:hover{
+    opacity: .5;
+    transition: opacity ease-in-out .2s;
+}
+
+
+
+/*------------------Leagals------------------------*/
+
+body.legals{
+    text-align: center;
+    background-image:url('src/BG-legal.jpg');
+    background-position:top center;
+    background-attachment:fixed;
+    background-size: cover;
+}
+body.legals section{
+    max-width: 1000px;
+    text-align: left;
+    padding: 0px 30px;
+    margin: 0px auto;
+}
+body.legals p{
+    margin:24px 0;
+}
+body.legals h1,
+body.legals h2,
+body.legals h3,
+body.legals h4{
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    margin: 32px 0;
+}
+body.legals h1{
+    font-size:45px;
+}
+body.legals h2{
+    font-size:30px;
+}
+body.legals h3{
+    font-size:24px;
+}
+body.legals h4{
+    font-size:22px;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .content h2{
+        font-size: 78px;
+    }
+    .content h3{
+        font-size: 19px;
+    }
+    .form{
+        width: 370px;
+        padding:16px 32px 32px 32px;
+    }
+    .twitter h4{
+        padding: 32px 0 16px 0;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+
+}
