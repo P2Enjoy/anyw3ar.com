@@ -28,7 +28,7 @@
                     <div class="form">
                         <div>
                         <h4>Coming soon. Be the first to know!</h4>
-                        <form id="myForm" class="my-2" method="post" action="https://script.google.com/macros/s/AKfycbyieuSMUJMKn1HKAXwcEU3R1lhsfgxnXBTJedLIg1pAKSRNpFb5wx1yjki3-1rSl37yZA/exec">
+                        <form id="myForm" class="my-2" method="post" action="https://script.google.com/macros/s/AKfycby5kezkTTHWzo_VyWHvGVLLk7_7RZtkklxCLznNHKVAqN9-gAqj_JyA0qTwbImoOkyLJg/exec">
                             <div class="my-2 champ">
                                 <input type="email" name="email" id="emailInput" placeholder="address@email.com"/>
                             </div>
@@ -50,32 +50,31 @@
                 </footer>
             </section>
             <script>
-                document.getElementById('myForm').addEventListener('submit', function(e) {
-                    e.preventDefault();
-                
-                    // Create a new FormData object from the form
-                    var formData = new FormData(this);
-                    
-                    // Get the email input value for later use
-                    var email = document.getElementById('emailInput').value;
-                
-                    // Use the Fetch API to submit the form data
-                    fetch(this.action, {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data);
-                
-                        // Replace the form with the "Thank you" message
-                        document.getElementById('myForm').innerHTML = 'Thank you ' + email + ', we\'ll be back to you very soon!';
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+                document.getElementById("myForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                const formData = new FormData(this);
+                var email = document.getElementById('emailInput').value;
+                fetch("https://script.google.com/macros/s/AKfycbx6JJXvfKdJLbS5FC1MUYFLnt41b5AhLNK9mdEvls81vL_NzQiDLvbtDA_gB-OCb1u-og/exec", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                    // Form submitted successfully
+                    console.log("Form submitted successfully");
+                    document.getElementById('myForm').innerHTML = 'Thank you ' + email + ', we\'ll be back to you very soon!';
+                    } else {
+                    // Error occurred
+                    console.error("Error: " + data.error);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error: " + error.message);
+                });
                 });
             </script>
+            
             <script type="text/javascript" src="https://cookie.eurowebpage.com/cookie.js?skin=cookielaw2&amp;position=bottom_left&amp;delay=0&amp;box_radius=5&amp;bg_color=C80815&amp;link_color=000000&amp;morelink=https%3A%2F%2Fanyw3ar.com%2Flegals.html&amp;accept_radius=5&amp;msg_color=ffffff"></script>
         </body>
     </html>
